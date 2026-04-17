@@ -1,0 +1,282 @@
+{
+  "analyses": {
+    "mschwarzmueller/ai-agents-workflows-course": {
+      "repo_key": "mschwarzmueller/ai-agents-workflows-course",
+      "analyzed_at": "2026-04-14T09:34:19.335025Z",
+      "focus": "general",
+      "report_depth": "standard",
+      "summary": "mschwarzmueller/ai-agents-workflows-course appears to use Python, node.js, python.",
+      "tech_stack": [
+        "Python",
+        "node.js",
+        "python"
+      ],
+      "risks": [
+        "Test directory is missing or sparse; regression risk may be high.",
+        "No CI workflow detected; code quality checks may be inconsistent.",
+        "No Dockerfile found; environment parity across machines may be weaker.",
+        "Dependency manifests were not parsed; stack governance visibility is limited."
+      ],
+      "recommendations": [
+        "Establish explicit module ownership and boundaries.",
+        "Add or strengthen CI checks for lint/test/security.",
+        "Prioritize dependency and configuration hygiene."
+      ]
+    },
+    "Ajith-T-S/thinkpalm-agentai-ajithts-lab1": {
+      "repo_key": "Ajith-T-S/thinkpalm-agentai-ajithts-lab1",
+      "analyzed_at": "2026-04-17T02:45:21.209928Z",
+      "focus": "general",
+      "report_depth": "deep",
+      "summary": "The repository Ajith-T-S/thinkpalm-agentai-ajithts-lab1 focuses on implementing a ReAct agent for weather-related queries using a Jupyter Notebook. It emphasizes interactive development and aims to integrate reasoning and tool-calling capabilities, making it suitable for prototyping AI agents.",
+      "tech_stack": [
+        "Jupyter Notebook"
+      ],
+      "risks": [
+        "Test directory is missing or sparse; regression risk may be high.",
+        "No CI workflow detected; code quality checks may be inconsistent.",
+        "No Dockerfile found; environment parity across machines may be weaker.",
+        "Dependency manifests were not parsed; stack governance visibility is limited."
+      ],
+      "recommendations": [
+        "Implement a testing framework and create a dedicated test directory to ensure reliability and reduce regression risks.",
+        "Establish a CI workflow to automate code quality checks and improve consistency.",
+        "Consider adding a Dockerfile to standardize the development environment and enhance portability.",
+        "Parse and document dependency manifests to improve stack governance and visibility."
+      ],
+      "risk_count": 4,
+      "module_count": 1,
+      "dependency_count": 0,
+      "stack_signature": "jupyter notebook",
+      "architecture_patterns": [
+        "No explicit architecture markers found; likely pragmatic modular structure",
+        "Running the project in Google Colab suggests a design consideration for accessibility and ease of use, allowing users to execute the code without local setup.",
+        "The focus on a minimal implementation may limit scalability; future iterations could explore expanding functionality or integrating additional tools for broader applications.",
+        "The naming of the notebook (`weather_react_agent_colab.ipynb`) implies a specific application of the ReAct agent in weather-related queries, showcasing a targeted use case.",
+        "The presence of a README.md suggests an effort to document the project, which is essential for user onboarding and understanding the project's purpose and usage.",
+        "The project aims to integrate reasoning and tool-calling capabilities, indicating a sophisticated approach to AI agent design that goes beyond simple query-response mechanisms.",
+        "The repository is structured around a Jupyter Notebook, indicating a focus on interactive development and experimentation, suitable for prototyping AI agents.",
+        "The repository may benefit from additional modularization, as the current structure suggests a single notebook approach which could become unwieldy as complexity grows.",
+        "There is no indication of tests or validation mechanisms in the sampled paths, which are crucial for ensuring the reliability of the agent's reasoning and tool-calling functionalities."
+      ],
+      "entry_points_count": 0,
+      "config_files_count": 0
+    },
+    "Ajith-T-S/thinkpalm-agentai-ajithts-Capstone-Sandbox": {
+      "repo_key": "Ajith-T-S/thinkpalm-agentai-ajithts-Capstone-Sandbox",
+      "analyzed_at": "2026-04-17T09:47:44.642522Z",
+      "focus": "general",
+      "report_depth": "deep",
+      "summary": "The repository 'Ajith-T-S/thinkpalm-agentai-ajithts-Capstone-Sandbox' is a Python and Node.js based project designed for agent-based architecture, focusing on code analysis and architecture review. It features a modular structure with distinct directories for various components, promoting separation of concerns.",
+      "tech_stack": [
+        "Python",
+        "node.js",
+        "python"
+      ],
+      "risks": [
+        "Test directory is missing or sparse; regression risk may be high.",
+        "No CI workflow detected; code quality checks may be inconsistent.",
+        "No Dockerfile found; environment parity across machines may be weaker."
+      ],
+      "recommendations": [
+        "Establish a testing framework and create unit tests to mitigate regression risks.",
+        "Implement a Continuous Integration (CI) workflow to automate code quality checks and ensure consistent quality.",
+        "Create a Dockerfile to standardize the development and production environments, improving deployment consistency."
+      ],
+      "risk_count": 3,
+      "module_count": 4,
+      "dependency_count": 10,
+      "stack_signature": "node.js|python|python",
+      "architecture_patterns": [
+        "Service layer abstraction present"
+      ],
+      "entry_points_count": 4,
+      "config_files_count": 4,
+      "sampled_file_paths": [
+        "README.md",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/README.md",
+        "requirements.txt",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/requirements.txt",
+        "package-lock.json",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/package-lock.json",
+        ".env.example",
+        ".gitignore",
+        "app.py",
+        "data/memory_store.json",
+        "main.py",
+        "reports/.gitkeep",
+        "src/__init__.py",
+        "src/agents/__init__.py",
+        "src/agents/architecture_review_agent.py",
+        "src/agents/repo_analysis_agent.py",
+        "src/agents/report_writer_agent.py",
+        "src/memory/__init__.py",
+        "src/memory/memory_store.py",
+        "src/models/__init__.py",
+        "src/models/schemas.py",
+        "src/services/__init__.py",
+        "src/services/github_service.py",
+        "src/services/llm_service.py",
+        "src/services/report_service.py",
+        "src/tools/__init__.py",
+        "src/tools/analysis_tools.py",
+        "src/tools/github_tools.py",
+        "src/tools/memory_tools.py",
+        "src/utils/__init__.py",
+        "src/utils/helpers.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/.env.example",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/.gitignore",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/app.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/data/memory_store.json",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/main.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/reports/.gitkeep",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/__init__.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/agents/__init__.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/agents/architecture_review_agent.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/agents/repo_analysis_agent.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/agents/report_writer_agent.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/memory/__init__.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/memory/memory_store.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/models/__init__.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/models/schemas.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/services/__init__.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/services/github_service.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/services/llm_service.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/services/report_service.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/tools/__init__.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/tools/analysis_tools.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/tools/github_tools.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/tools/memory_tools.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/utils/__init__.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/utils/helpers.py"
+      ],
+      "config_file_paths": [
+        "requirements.txt",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/requirements.txt",
+        ".env.example",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/.env.example"
+      ],
+      "entry_point_paths": [
+        "app.py",
+        "main.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/app.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/main.py"
+      ],
+      "key_directories": [
+        "src"
+      ]
+    }
+  },
+  "preferences": {
+    "default_user": {
+      "focus": "general",
+      "report_depth": "deep"
+    }
+  },
+  "history": [
+    {
+      "repo_key": "Ajith-T-S/thinkpalm-agentai-ajithts-Capstone-Sandbox",
+      "analyzed_at": "2026-04-17T09:47:44.642522Z",
+      "focus": "general",
+      "report_depth": "deep",
+      "summary": "The repository 'Ajith-T-S/thinkpalm-agentai-ajithts-Capstone-Sandbox' is a Python and Node.js based project designed for agent-based architecture, focusing on code analysis and architecture review. It features a modular structure with distinct directories for various components, promoting separation of concerns.",
+      "tech_stack": [
+        "Python",
+        "node.js",
+        "python"
+      ],
+      "risks": [
+        "Test directory is missing or sparse; regression risk may be high.",
+        "No CI workflow detected; code quality checks may be inconsistent.",
+        "No Dockerfile found; environment parity across machines may be weaker."
+      ],
+      "recommendations": [
+        "Establish a testing framework and create unit tests to mitigate regression risks.",
+        "Implement a Continuous Integration (CI) workflow to automate code quality checks and ensure consistent quality.",
+        "Create a Dockerfile to standardize the development and production environments, improving deployment consistency."
+      ],
+      "risk_count": 3,
+      "module_count": 4,
+      "dependency_count": 10,
+      "stack_signature": "node.js|python|python",
+      "architecture_patterns": [
+        "Service layer abstraction present"
+      ],
+      "entry_points_count": 4,
+      "config_files_count": 4,
+      "sampled_file_paths": [
+        "README.md",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/README.md",
+        "requirements.txt",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/requirements.txt",
+        "package-lock.json",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/package-lock.json",
+        ".env.example",
+        ".gitignore",
+        "app.py",
+        "data/memory_store.json",
+        "main.py",
+        "reports/.gitkeep",
+        "src/__init__.py",
+        "src/agents/__init__.py",
+        "src/agents/architecture_review_agent.py",
+        "src/agents/repo_analysis_agent.py",
+        "src/agents/report_writer_agent.py",
+        "src/memory/__init__.py",
+        "src/memory/memory_store.py",
+        "src/models/__init__.py",
+        "src/models/schemas.py",
+        "src/services/__init__.py",
+        "src/services/github_service.py",
+        "src/services/llm_service.py",
+        "src/services/report_service.py",
+        "src/tools/__init__.py",
+        "src/tools/analysis_tools.py",
+        "src/tools/github_tools.py",
+        "src/tools/memory_tools.py",
+        "src/utils/__init__.py",
+        "src/utils/helpers.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/.env.example",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/.gitignore",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/app.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/data/memory_store.json",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/main.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/reports/.gitkeep",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/__init__.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/agents/__init__.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/agents/architecture_review_agent.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/agents/repo_analysis_agent.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/agents/report_writer_agent.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/memory/__init__.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/memory/memory_store.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/models/__init__.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/models/schemas.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/services/__init__.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/services/github_service.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/services/llm_service.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/services/report_service.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/tools/__init__.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/tools/analysis_tools.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/tools/github_tools.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/tools/memory_tools.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/utils/__init__.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/src/utils/helpers.py"
+      ],
+      "config_file_paths": [
+        "requirements.txt",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/requirements.txt",
+        ".env.example",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/.env.example"
+      ],
+      "entry_point_paths": [
+        "app.py",
+        "main.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/app.py",
+        "thinkpalm-agentai-ajithts-Capstone-Sandbox/main.py"
+      ],
+      "key_directories": [
+        "src"
+      ]
+    }
+  ]
+}
