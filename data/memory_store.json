@@ -165,6 +165,167 @@
       "key_directories": [
         "src"
       ]
+    },
+    "Ajith-T-S/thinkpalm-agentai-ArchGuard-teamalpha-demo1": {
+      "repo_key": "Ajith-T-S/thinkpalm-agentai-ArchGuard-teamalpha-demo1",
+      "analyzed_at": "2026-04-18T07:22:26.856174Z",
+      "focus": "security",
+      "report_depth": "deep",
+      "summary": "The repository 'Ajith-T-S/thinkpalm-agentai-ArchGuard-teamalpha-demo1' is a Python and Node.js application utilizing GitHub Actions for CI/CD. It features a modular structure with a focus on automated testing and environment variable management, but lacks certain security measures and configurations.",
+      "tech_stack": [
+        "Python",
+        "github-actions",
+        "node.js",
+        "python"
+      ],
+      "risks": [
+        "No Dockerfile found; environment parity across machines may be weaker.",
+        "No explicit security policy/config evidence found (e.g., SAST, secret scanning configs)."
+      ],
+      "recommendations": [
+        "Create a Dockerfile to ensure consistent development and production environments.",
+        "Implement a security policy that includes Static Application Security Testing (SAST) and secret scanning configurations.",
+        "Consider using a more secure data storage solution instead of JSON files for sensitive data.",
+        "Regularly update dependencies listed in requirements.txt to mitigate vulnerabilities."
+      ],
+      "risk_count": 2,
+      "module_count": 6,
+      "dependency_count": 14,
+      "stack_signature": "github-actions|node.js|python|python",
+      "architecture_patterns": [
+        "Automated testing layout detected",
+        "CI automation through GitHub Actions",
+        "Service layer abstraction present"
+      ],
+      "entry_points_count": 2,
+      "config_files_count": 2,
+      "sampled_file_paths": [
+        "README.md",
+        "requirements.txt",
+        "package-lock.json",
+        ".github/workflows/ci.yml",
+        ".env.example",
+        ".gitignore",
+        "Makefile",
+        "app.py",
+        "data/memory_store.json",
+        "docs/one_page_writeup.md",
+        "main.py",
+        "reports/.gitkeep",
+        "src/__init__.py",
+        "src/agents/__init__.py",
+        "src/agents/architecture_review_agent.py",
+        "src/agents/repo_analysis_agent.py",
+        "src/agents/report_writer_agent.py",
+        "src/memory/__init__.py",
+        "src/memory/memory_store.py",
+        "src/models/__init__.py",
+        "src/models/schemas.py",
+        "src/services/__init__.py",
+        "src/services/github_service.py",
+        "src/services/llm_service.py",
+        "src/services/report_service.py",
+        "src/tools/__init__.py",
+        "src/tools/analysis_tools.py",
+        "src/tools/github_tools.py",
+        "src/tools/memory_tools.py",
+        "src/utils/__init__.py",
+        "src/utils/helpers.py",
+        "tests/conftest.py",
+        "tests/test_analysis_tools.py",
+        "tests/test_helpers.py",
+        "tests/test_memory_store.py",
+        "tests/test_pipeline_integration.py"
+      ],
+      "config_file_paths": [
+        "requirements.txt",
+        ".env.example"
+      ],
+      "entry_point_paths": [
+        "app.py",
+        "main.py"
+      ],
+      "key_directories": [
+        "src",
+        "tests",
+        "docs"
+      ]
+    },
+    "Ajith-T-S/thinkpalm-agentai-ArchGuard-teamalpha-demo2": {
+      "repo_key": "Ajith-T-S/thinkpalm-agentai-ArchGuard-teamalpha-demo2",
+      "analyzed_at": "2026-04-18T07:44:40.606405Z",
+      "focus": "general",
+      "report_depth": "deep",
+      "summary": "The repository 'Ajith-T-S/thinkpalm-agentai-ArchGuard-teamalpha-demo2' is a Python and Node.js based application structured around a modular architecture. It includes components for data handling, documentation, and reporting, with a focus on agent implementations. The project aims to facilitate agent state management and modular functionality, although it currently lacks comprehensive documentation and testing.",
+      "tech_stack": [
+        "Python",
+        "node.js",
+        "python"
+      ],
+      "risks": [
+        "Test directory is missing or sparse; regression risk may be high.",
+        "No CI workflow detected; code quality checks may be inconsistent.",
+        "No Dockerfile found; environment parity across machines may be weaker."
+      ],
+      "recommendations": [
+        "Establish a testing framework and populate the test directory to mitigate regression risks.",
+        "Implement a Continuous Integration (CI) workflow to ensure consistent code quality checks.",
+        "Create a Dockerfile to standardize the development and production environments.",
+        "Enhance the README.md with a clear project description and usage instructions.",
+        "Review and expand the documentation in 'docs/one_page_writeup.md' for better clarity."
+      ],
+      "risk_count": 3,
+      "module_count": 4,
+      "dependency_count": 10,
+      "stack_signature": "node.js|python|python",
+      "architecture_patterns": [
+        "Service layer abstraction present"
+      ],
+      "entry_points_count": 2,
+      "config_files_count": 2,
+      "sampled_file_paths": [
+        "README.md",
+        "requirements.txt",
+        "package-lock.json",
+        ".env.example",
+        ".gitignore",
+        "app.py",
+        "data/memory_store.json",
+        "docs/one_page_writeup.md",
+        "main.py",
+        "reports/.gitkeep",
+        "src/__init__.py",
+        "src/agents/__init__.py",
+        "src/agents/architecture_review_agent.py",
+        "src/agents/repo_analysis_agent.py",
+        "src/agents/report_writer_agent.py",
+        "src/memory/__init__.py",
+        "src/memory/memory_store.py",
+        "src/models/__init__.py",
+        "src/models/schemas.py",
+        "src/services/__init__.py",
+        "src/services/github_service.py",
+        "src/services/llm_service.py",
+        "src/services/report_service.py",
+        "src/tools/__init__.py",
+        "src/tools/analysis_tools.py",
+        "src/tools/github_tools.py",
+        "src/tools/memory_tools.py",
+        "src/utils/__init__.py",
+        "src/utils/helpers.py"
+      ],
+      "config_file_paths": [
+        "requirements.txt",
+        ".env.example"
+      ],
+      "entry_point_paths": [
+        "app.py",
+        "main.py"
+      ],
+      "key_directories": [
+        "src",
+        "docs"
+      ]
     }
   },
   "preferences": {
@@ -276,6 +437,572 @@
       ],
       "key_directories": [
         "src"
+      ]
+    },
+    {
+      "repo_key": "Ajith-T-S/thinkpalm-agentai-ArchGuard-teamalpha-demo1",
+      "analyzed_at": "2026-04-17T17:21:06.608724Z",
+      "focus": "general",
+      "report_depth": "deep",
+      "summary": "The repository 'Ajith-T-S/thinkpalm-agentai-ArchGuard-teamalpha-demo1' is a Python and Node.js based project organized into modular components, focusing on automated analysis and review processes. It includes documentation efforts but lacks comprehensive onboarding materials and testing infrastructure.",
+      "tech_stack": [
+        "Python",
+        "node.js",
+        "python"
+      ],
+      "risks": [
+        "Test directory is missing or sparse; regression risk may be high.",
+        "No CI workflow detected; code quality checks may be inconsistent.",
+        "No Dockerfile found; environment parity across machines may be weaker."
+      ],
+      "recommendations": [
+        "Establish a comprehensive testing strategy and create a dedicated test directory to mitigate regression risks.",
+        "Implement a Continuous Integration (CI) workflow to ensure consistent code quality checks and automated testing.",
+        "Create a Dockerfile to standardize the development environment and improve deployment consistency.",
+        "Enhance documentation in 'README.md' and 'docs/one_page_writeup.md' to facilitate onboarding for new contributors."
+      ],
+      "risk_count": 3,
+      "module_count": 4,
+      "dependency_count": 10,
+      "stack_signature": "node.js|python|python",
+      "architecture_patterns": [
+        "Service layer abstraction present"
+      ],
+      "entry_points_count": 2,
+      "config_files_count": 2,
+      "sampled_file_paths": [
+        "README.md",
+        "requirements.txt",
+        "package-lock.json",
+        ".env.example",
+        ".gitignore",
+        "app.py",
+        "data/memory_store.json",
+        "docs/one_page_writeup.md",
+        "main.py",
+        "reports/.gitkeep",
+        "src/__init__.py",
+        "src/agents/__init__.py",
+        "src/agents/architecture_review_agent.py",
+        "src/agents/repo_analysis_agent.py",
+        "src/agents/report_writer_agent.py",
+        "src/memory/__init__.py",
+        "src/memory/memory_store.py",
+        "src/models/__init__.py",
+        "src/models/schemas.py",
+        "src/services/__init__.py",
+        "src/services/github_service.py",
+        "src/services/llm_service.py",
+        "src/services/report_service.py",
+        "src/tools/__init__.py",
+        "src/tools/analysis_tools.py",
+        "src/tools/github_tools.py",
+        "src/tools/memory_tools.py",
+        "src/utils/__init__.py",
+        "src/utils/helpers.py"
+      ],
+      "config_file_paths": [
+        "requirements.txt",
+        ".env.example"
+      ],
+      "entry_point_paths": [
+        "app.py",
+        "main.py"
+      ],
+      "key_directories": [
+        "src",
+        "docs"
+      ]
+    },
+    {
+      "repo_key": "Ajith-T-S/thinkpalm-agentai-ArchGuard-teamalpha-demo1",
+      "analyzed_at": "2026-04-17T17:46:52.157930Z",
+      "focus": "general",
+      "report_depth": "deep",
+      "summary": "The repository 'Ajith-T-S/thinkpalm-agentai-ArchGuard-teamalpha-demo1' is a modular Python and Node.js project that appears to focus on agent-based architecture with a service layer abstraction. It includes various modules for data handling, documentation, reporting, and source code organization, but lacks comprehensive testing and CI/CD practices.",
+      "tech_stack": [
+        "Python",
+        "node.js",
+        "python"
+      ],
+      "risks": [
+        "Test directory is missing or sparse; regression risk may be high.",
+        "No CI workflow detected; code quality checks may be inconsistent.",
+        "No Dockerfile found; environment parity across machines may be weaker."
+      ],
+      "recommendations": [
+        "Establish a testing framework and create a dedicated test directory to mitigate regression risks.",
+        "Implement a CI/CD workflow to automate code quality checks and ensure consistent integration.",
+        "Create a Dockerfile to standardize the development and production environments, enhancing environment parity.",
+        "Enhance the `README.md` with a clear project description and usage instructions to improve onboarding.",
+        "Review and expand the documentation in `docs/one_page_writeup.md` for better clarity and depth."
+      ],
+      "risk_count": 3,
+      "module_count": 4,
+      "dependency_count": 10,
+      "stack_signature": "node.js|python|python",
+      "architecture_patterns": [
+        "Service layer abstraction present"
+      ],
+      "entry_points_count": 2,
+      "config_files_count": 2,
+      "sampled_file_paths": [
+        "README.md",
+        "requirements.txt",
+        "package-lock.json",
+        ".env.example",
+        ".gitignore",
+        "app.py",
+        "data/memory_store.json",
+        "docs/one_page_writeup.md",
+        "main.py",
+        "reports/.gitkeep",
+        "src/__init__.py",
+        "src/agents/__init__.py",
+        "src/agents/architecture_review_agent.py",
+        "src/agents/repo_analysis_agent.py",
+        "src/agents/report_writer_agent.py",
+        "src/memory/__init__.py",
+        "src/memory/memory_store.py",
+        "src/models/__init__.py",
+        "src/models/schemas.py",
+        "src/services/__init__.py",
+        "src/services/github_service.py",
+        "src/services/llm_service.py",
+        "src/services/report_service.py",
+        "src/tools/__init__.py",
+        "src/tools/analysis_tools.py",
+        "src/tools/github_tools.py",
+        "src/tools/memory_tools.py",
+        "src/utils/__init__.py",
+        "src/utils/helpers.py"
+      ],
+      "config_file_paths": [
+        "requirements.txt",
+        ".env.example"
+      ],
+      "entry_point_paths": [
+        "app.py",
+        "main.py"
+      ],
+      "key_directories": [
+        "src",
+        "docs"
+      ]
+    },
+    {
+      "repo_key": "Ajith-T-S/thinkpalm-agentai-ArchGuard-teamalpha-demo1",
+      "analyzed_at": "2026-04-17T17:51:21.995903Z",
+      "focus": "general",
+      "report_depth": "deep",
+      "summary": "The repository 'Ajith-T-S/thinkpalm-agentai-ArchGuard-teamalpha-demo1' is a Python and Node.js based application that employs GitHub Actions for CI/CD. It features a modular design with a focus on automated testing, data modeling, and service layer abstraction. The project includes essential documentation and predefined commands to enhance developer productivity.",
+      "tech_stack": [
+        "Python",
+        "github-actions",
+        "node.js",
+        "python"
+      ],
+      "risks": [
+        "No Dockerfile found; environment parity across machines may be weaker, leading to potential deployment issues."
+      ],
+      "recommendations": [
+        "Consider adding a Dockerfile to standardize the development and production environments, enhancing portability and consistency.",
+        "Enhance the content of the 'README.md' to provide clearer onboarding instructions and project usage guidelines.",
+        "Regularly review and update the 'requirements.txt' to ensure dependencies are current and secure.",
+        "Implement performance testing to evaluate the impact of data persistence on application scalability."
+      ],
+      "risk_count": 1,
+      "module_count": 6,
+      "dependency_count": 14,
+      "stack_signature": "github-actions|node.js|python|python",
+      "architecture_patterns": [
+        "Automated testing layout detected",
+        "CI automation through GitHub Actions",
+        "Service layer abstraction present"
+      ],
+      "entry_points_count": 2,
+      "config_files_count": 2,
+      "sampled_file_paths": [
+        "README.md",
+        "requirements.txt",
+        "package-lock.json",
+        ".github/workflows/ci.yml",
+        ".env.example",
+        ".gitignore",
+        "Makefile",
+        "app.py",
+        "data/memory_store.json",
+        "docs/one_page_writeup.md",
+        "main.py",
+        "reports/.gitkeep",
+        "src/__init__.py",
+        "src/agents/__init__.py",
+        "src/agents/architecture_review_agent.py",
+        "src/agents/repo_analysis_agent.py",
+        "src/agents/report_writer_agent.py",
+        "src/memory/__init__.py",
+        "src/memory/memory_store.py",
+        "src/models/__init__.py",
+        "src/models/schemas.py",
+        "src/services/__init__.py",
+        "src/services/github_service.py",
+        "src/services/llm_service.py",
+        "src/services/report_service.py",
+        "src/tools/__init__.py",
+        "src/tools/analysis_tools.py",
+        "src/tools/github_tools.py",
+        "src/tools/memory_tools.py",
+        "src/utils/__init__.py",
+        "src/utils/helpers.py",
+        "tests/conftest.py",
+        "tests/test_analysis_tools.py",
+        "tests/test_helpers.py",
+        "tests/test_memory_store.py",
+        "tests/test_pipeline_integration.py"
+      ],
+      "config_file_paths": [
+        "requirements.txt",
+        ".env.example"
+      ],
+      "entry_point_paths": [
+        "app.py",
+        "main.py"
+      ],
+      "key_directories": [
+        "src",
+        "tests",
+        "docs"
+      ]
+    },
+    {
+      "repo_key": "Ajith-T-S/thinkpalm-agentai-ArchGuard-teamalpha-demo1",
+      "analyzed_at": "2026-04-18T07:18:26.132939Z",
+      "focus": "general",
+      "report_depth": "deep",
+      "summary": "The repository 'Ajith-T-S/thinkpalm-agentai-ArchGuard-teamalpha-demo1' is a Python-based application that utilizes GitHub Actions for CI/CD. It features a modular architecture with a focus on automated testing and service layer abstraction. The project includes various directories for source code, tests, documentation, and reports, indicating a structured approach to development.",
+      "tech_stack": [
+        "Python",
+        "github-actions",
+        "node.js",
+        "python"
+      ],
+      "risks": [
+        "No Dockerfile found; environment parity across machines may be weaker."
+      ],
+      "recommendations": [
+        "Consider adding a Dockerfile to standardize the development and production environments.",
+        "Review and enhance the README.md for clarity and completeness to assist new contributors.",
+        "Implement a strategy for managing larger datasets if JSON storage is insufficient.",
+        "Regularly update the requirements.txt to avoid dependency conflicts.",
+        "Ensure that the .env.example file is kept up to date with necessary environment variables."
+      ],
+      "risk_count": 1,
+      "module_count": 6,
+      "dependency_count": 14,
+      "stack_signature": "github-actions|node.js|python|python",
+      "architecture_patterns": [
+        "Automated testing layout detected",
+        "CI automation through GitHub Actions",
+        "Service layer abstraction present"
+      ],
+      "entry_points_count": 2,
+      "config_files_count": 2,
+      "sampled_file_paths": [
+        "README.md",
+        "requirements.txt",
+        "package-lock.json",
+        ".github/workflows/ci.yml",
+        ".env.example",
+        ".gitignore",
+        "Makefile",
+        "app.py",
+        "data/memory_store.json",
+        "docs/one_page_writeup.md",
+        "main.py",
+        "reports/.gitkeep",
+        "src/__init__.py",
+        "src/agents/__init__.py",
+        "src/agents/architecture_review_agent.py",
+        "src/agents/repo_analysis_agent.py",
+        "src/agents/report_writer_agent.py",
+        "src/memory/__init__.py",
+        "src/memory/memory_store.py",
+        "src/models/__init__.py",
+        "src/models/schemas.py",
+        "src/services/__init__.py",
+        "src/services/github_service.py",
+        "src/services/llm_service.py",
+        "src/services/report_service.py",
+        "src/tools/__init__.py",
+        "src/tools/analysis_tools.py",
+        "src/tools/github_tools.py",
+        "src/tools/memory_tools.py",
+        "src/utils/__init__.py",
+        "src/utils/helpers.py",
+        "tests/conftest.py",
+        "tests/test_analysis_tools.py",
+        "tests/test_helpers.py",
+        "tests/test_memory_store.py",
+        "tests/test_pipeline_integration.py"
+      ],
+      "config_file_paths": [
+        "requirements.txt",
+        ".env.example"
+      ],
+      "entry_point_paths": [
+        "app.py",
+        "main.py"
+      ],
+      "key_directories": [
+        "src",
+        "tests",
+        "docs"
+      ]
+    },
+    {
+      "repo_key": "Ajith-T-S/thinkpalm-agentai-ArchGuard-teamalpha-demo1",
+      "analyzed_at": "2026-04-18T07:19:11.762860Z",
+      "focus": "scalability",
+      "report_depth": "deep",
+      "summary": "The repository Ajith-T-S/thinkpalm-agentai-ArchGuard-teamalpha-demo1 is a Python and Node.js based application that utilizes GitHub Actions for CI/CD. It features a modular design with a focus on automated testing and service layer abstraction, which supports scalability. The project includes various modules for data handling, documentation, reporting, and testing, indicating a structured approach to development.",
+      "tech_stack": [
+        "Python",
+        "github-actions",
+        "node.js",
+        "python"
+      ],
+      "risks": [
+        "No Dockerfile found; environment parity across machines may be weaker, leading to deployment issues.",
+        "Limited direct evidence of performance/load strategy from static repository scan, which may hinder scalability under high load."
+      ],
+      "recommendations": [
+        "Create a Dockerfile to ensure consistent development and production environments, enhancing scalability.",
+        "Implement performance/load testing strategies to identify bottlenecks and ensure the application can handle increased load.",
+        "Consider using a more robust persistent data store (e.g., PostgreSQL, MongoDB) instead of a JSON file for better scalability and data management.",
+        "Regularly update documentation to reflect architectural changes and facilitate onboarding of new contributors."
+      ],
+      "risk_count": 2,
+      "module_count": 6,
+      "dependency_count": 14,
+      "stack_signature": "github-actions|node.js|python|python",
+      "architecture_patterns": [
+        "Automated testing layout detected",
+        "CI automation through GitHub Actions",
+        "Service layer abstraction present"
+      ],
+      "entry_points_count": 2,
+      "config_files_count": 2,
+      "sampled_file_paths": [
+        "README.md",
+        "requirements.txt",
+        "package-lock.json",
+        ".github/workflows/ci.yml",
+        ".env.example",
+        ".gitignore",
+        "Makefile",
+        "app.py",
+        "data/memory_store.json",
+        "docs/one_page_writeup.md",
+        "main.py",
+        "reports/.gitkeep",
+        "src/__init__.py",
+        "src/agents/__init__.py",
+        "src/agents/architecture_review_agent.py",
+        "src/agents/repo_analysis_agent.py",
+        "src/agents/report_writer_agent.py",
+        "src/memory/__init__.py",
+        "src/memory/memory_store.py",
+        "src/models/__init__.py",
+        "src/models/schemas.py",
+        "src/services/__init__.py",
+        "src/services/github_service.py",
+        "src/services/llm_service.py",
+        "src/services/report_service.py",
+        "src/tools/__init__.py",
+        "src/tools/analysis_tools.py",
+        "src/tools/github_tools.py",
+        "src/tools/memory_tools.py",
+        "src/utils/__init__.py",
+        "src/utils/helpers.py",
+        "tests/conftest.py",
+        "tests/test_analysis_tools.py",
+        "tests/test_helpers.py",
+        "tests/test_memory_store.py",
+        "tests/test_pipeline_integration.py"
+      ],
+      "config_file_paths": [
+        "requirements.txt",
+        ".env.example"
+      ],
+      "entry_point_paths": [
+        "app.py",
+        "main.py"
+      ],
+      "key_directories": [
+        "src",
+        "tests",
+        "docs"
+      ]
+    },
+    {
+      "repo_key": "Ajith-T-S/thinkpalm-agentai-ArchGuard-teamalpha-demo1",
+      "analyzed_at": "2026-04-18T07:22:26.856174Z",
+      "focus": "security",
+      "report_depth": "deep",
+      "summary": "The repository 'Ajith-T-S/thinkpalm-agentai-ArchGuard-teamalpha-demo1' is a Python and Node.js application utilizing GitHub Actions for CI/CD. It features a modular structure with a focus on automated testing and environment variable management, but lacks certain security measures and configurations.",
+      "tech_stack": [
+        "Python",
+        "github-actions",
+        "node.js",
+        "python"
+      ],
+      "risks": [
+        "No Dockerfile found; environment parity across machines may be weaker.",
+        "No explicit security policy/config evidence found (e.g., SAST, secret scanning configs)."
+      ],
+      "recommendations": [
+        "Create a Dockerfile to ensure consistent development and production environments.",
+        "Implement a security policy that includes Static Application Security Testing (SAST) and secret scanning configurations.",
+        "Consider using a more secure data storage solution instead of JSON files for sensitive data.",
+        "Regularly update dependencies listed in requirements.txt to mitigate vulnerabilities."
+      ],
+      "risk_count": 2,
+      "module_count": 6,
+      "dependency_count": 14,
+      "stack_signature": "github-actions|node.js|python|python",
+      "architecture_patterns": [
+        "Automated testing layout detected",
+        "CI automation through GitHub Actions",
+        "Service layer abstraction present"
+      ],
+      "entry_points_count": 2,
+      "config_files_count": 2,
+      "sampled_file_paths": [
+        "README.md",
+        "requirements.txt",
+        "package-lock.json",
+        ".github/workflows/ci.yml",
+        ".env.example",
+        ".gitignore",
+        "Makefile",
+        "app.py",
+        "data/memory_store.json",
+        "docs/one_page_writeup.md",
+        "main.py",
+        "reports/.gitkeep",
+        "src/__init__.py",
+        "src/agents/__init__.py",
+        "src/agents/architecture_review_agent.py",
+        "src/agents/repo_analysis_agent.py",
+        "src/agents/report_writer_agent.py",
+        "src/memory/__init__.py",
+        "src/memory/memory_store.py",
+        "src/models/__init__.py",
+        "src/models/schemas.py",
+        "src/services/__init__.py",
+        "src/services/github_service.py",
+        "src/services/llm_service.py",
+        "src/services/report_service.py",
+        "src/tools/__init__.py",
+        "src/tools/analysis_tools.py",
+        "src/tools/github_tools.py",
+        "src/tools/memory_tools.py",
+        "src/utils/__init__.py",
+        "src/utils/helpers.py",
+        "tests/conftest.py",
+        "tests/test_analysis_tools.py",
+        "tests/test_helpers.py",
+        "tests/test_memory_store.py",
+        "tests/test_pipeline_integration.py"
+      ],
+      "config_file_paths": [
+        "requirements.txt",
+        ".env.example"
+      ],
+      "entry_point_paths": [
+        "app.py",
+        "main.py"
+      ],
+      "key_directories": [
+        "src",
+        "tests",
+        "docs"
+      ]
+    },
+    {
+      "repo_key": "Ajith-T-S/thinkpalm-agentai-ArchGuard-teamalpha-demo2",
+      "analyzed_at": "2026-04-18T07:44:40.606405Z",
+      "focus": "general",
+      "report_depth": "deep",
+      "summary": "The repository 'Ajith-T-S/thinkpalm-agentai-ArchGuard-teamalpha-demo2' is a Python and Node.js based application structured around a modular architecture. It includes components for data handling, documentation, and reporting, with a focus on agent implementations. The project aims to facilitate agent state management and modular functionality, although it currently lacks comprehensive documentation and testing.",
+      "tech_stack": [
+        "Python",
+        "node.js",
+        "python"
+      ],
+      "risks": [
+        "Test directory is missing or sparse; regression risk may be high.",
+        "No CI workflow detected; code quality checks may be inconsistent.",
+        "No Dockerfile found; environment parity across machines may be weaker."
+      ],
+      "recommendations": [
+        "Establish a testing framework and populate the test directory to mitigate regression risks.",
+        "Implement a Continuous Integration (CI) workflow to ensure consistent code quality checks.",
+        "Create a Dockerfile to standardize the development and production environments.",
+        "Enhance the README.md with a clear project description and usage instructions.",
+        "Review and expand the documentation in 'docs/one_page_writeup.md' for better clarity."
+      ],
+      "risk_count": 3,
+      "module_count": 4,
+      "dependency_count": 10,
+      "stack_signature": "node.js|python|python",
+      "architecture_patterns": [
+        "Service layer abstraction present"
+      ],
+      "entry_points_count": 2,
+      "config_files_count": 2,
+      "sampled_file_paths": [
+        "README.md",
+        "requirements.txt",
+        "package-lock.json",
+        ".env.example",
+        ".gitignore",
+        "app.py",
+        "data/memory_store.json",
+        "docs/one_page_writeup.md",
+        "main.py",
+        "reports/.gitkeep",
+        "src/__init__.py",
+        "src/agents/__init__.py",
+        "src/agents/architecture_review_agent.py",
+        "src/agents/repo_analysis_agent.py",
+        "src/agents/report_writer_agent.py",
+        "src/memory/__init__.py",
+        "src/memory/memory_store.py",
+        "src/models/__init__.py",
+        "src/models/schemas.py",
+        "src/services/__init__.py",
+        "src/services/github_service.py",
+        "src/services/llm_service.py",
+        "src/services/report_service.py",
+        "src/tools/__init__.py",
+        "src/tools/analysis_tools.py",
+        "src/tools/github_tools.py",
+        "src/tools/memory_tools.py",
+        "src/utils/__init__.py",
+        "src/utils/helpers.py"
+      ],
+      "config_file_paths": [
+        "requirements.txt",
+        ".env.example"
+      ],
+      "entry_point_paths": [
+        "app.py",
+        "main.py"
+      ],
+      "key_directories": [
+        "src",
+        "docs"
       ]
     }
   ]

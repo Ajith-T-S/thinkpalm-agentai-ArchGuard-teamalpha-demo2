@@ -1,15 +1,36 @@
-#Author
-AJITH T S
-Tech Lead
-Capstone Sandbox — Full Agent Pipeline
-
-What it does :
-
-AI assistant that can ingest a GitHub repository, analyze architecture signals, and generate a structured architecture review that is demo-friendly and easy to run
-
 # AI Architecture Review Assistant
 
+**Project name:** ArchGuard AI
+
+**Author (sole team member):** AJITH T S — Tech Lead
+
+**Contributions & responsibilities:** Product direction and scope; multi-agent pipeline (repo analysis, architecture review, report writer) with LangChain tool-calling; GitHub integration and JSON memory/drift logic; Streamlit UI and Typer CLI; quality gates (tests, lint/format, CI); documentation, demo assets, and submission materials.
+
 AI Architecture Review Assistant is an end-to-end, agentic mini project that ingests a GitHub repository and generates a structured architecture review report with practical recommendations.
+
+**What it does:** Ingests a GitHub repository, analyzes architecture signals, and produces a structured review that is demo-friendly and easy to run.
+
+## Tech stack (versions)
+
+| Layer | Technology | Version |
+| --- | --- | --- |
+| Runtime | Python | 3.11 (used in CI; local 3.11+ recommended) |
+| UI | Streamlit | ≥ 1.33.0 |
+| LLM orchestration | LangChain | ≥ 0.2.11 |
+|  | langchain-core | ≥ 0.2.24 |
+|  | langchain-openai | ≥ 0.1.17 |
+| LLM API | OpenAI Python SDK | ≥ 1.40.0 |
+| Data / config | Pydantic | ≥ 2.7.0 |
+|  | python-dotenv | ≥ 1.0.1 |
+| HTTP | requests | ≥ 2.32.0 |
+| CLI | Typer | ≥ 0.12.3 |
+|  | Rich | ≥ 13.7.1 |
+| Tabular UI | pandas | ≥ 2.2.0 |
+| Tests | pytest | ≥ 8.2.0 |
+| Dev quality | Black | ≥ 24.4.0 |
+|  | Ruff | ≥ 0.5.0 |
+
+Default LLM model is configurable via `.env` (`OPENAI_MODEL`, commonly `gpt-4o-mini`). Exact installed versions depend on your environment; use `pip freeze` after `pip install -r requirements.txt` to pin a full lockfile if needed.
 
 ## Project overview
 The app analyzes repository metadata, file structure, dependency manifests, and key config signals. It then uses multiple agents to produce a review report covering architecture observations, risks, and next steps.
@@ -95,7 +116,6 @@ Project documentation assets in `docs/`:
 
 If PNG/PDF is required, export `docs/architecture_diagram.md` Mermaid diagram to:
 - `docs/architecture_diagram.png`
-- `docs/architecture_diagram.pdf`
 
 ## Folder structure
 ```text
@@ -189,6 +209,50 @@ UI supports:
 - markdown + JSON export
 - run history panel (current repo and cross-repo)
 
+## Screenshots
+
+Streamlit UI (`streamlit run app.py`): landing view first, then result tabs in the same order as the app.
+
+### Landing
+
+![Landing page](screenshots/Landing_page.png)
+
+### Summary
+
+![Summary tab](screenshots/Summary_tab.png)
+
+### Repo Structure
+
+![Repo Structure tab](screenshots/repo_structure.png)
+
+### Findings
+
+![Findings tab](screenshots/findings_tab.png)
+
+### Recommendations
+
+![Recommendations tab](screenshots/recommendations_tab.png)
+
+### Action Plan
+
+![Action Plan tab](screenshots/action_plan.png)
+
+### Raw Evidence
+
+![Raw Evidence tab](screenshots/raw_evidence_tab.png)
+
+### Reasoning Trace
+
+![Reasoning Trace tab](screenshots/reasoning_trace.png)
+
+### Architecture Drift
+
+![Architecture Drift tab](screenshots/architecture_drift.png)
+
+### Reports
+
+![Reports tab](screenshots/reports_tab.png)
+
 ## Run CLI
 ```bash
 python main.py analyze langchain-ai/langchain --focus maintainability
@@ -198,6 +262,20 @@ Optional token override:
 ```bash
 python main.py analyze microsoft/vscode --github-token <token>
 ```
+
+## Quality and reliability checks
+- Unit tests cover:
+  - repo input parsing
+  - dependency parsing
+  - memory store read/write/compare behavior
+- Integration smoke test validates the end-to-end pipeline using mocked GitHub API responses and mocked LLM output.
+- Make targets:
+  - `make test`
+  - `make lint`
+  - `make format`
+  - `make run-ui`
+  - `make run-cli`
+- CI workflow is available at `.github/workflows/ci.yml` and runs lint + tests on pushes and pull requests.
 
 ## Sample input and output
 
@@ -220,14 +298,6 @@ python main.py analyze microsoft/vscode --github-token <token>
 
 Generated markdown report is saved under `reports/`.
 
-## 8-minute demo flow
-See [`docs/demo_script_outline.md`](docs/demo_script_outline.md). Quick suggested flow:
-1. Intro and problem (0:00-0:45)
-2. Architecture and agents/tools/memory overview (0:45-2:00)
-3. Streamlit run + analysis demo (2:00-5:00)
-4. Memory comparison rerun (5:00-6:30)
-5. CLI run and repo export location (6:30-7:30)
-6. Limitations and future enhancements (7:30-8:00)
 
 ## Safeguards included
 - Limits files analyzed and file size to control token cost
@@ -249,4 +319,3 @@ See [`docs/demo_script_outline.md`](docs/demo_script_outline.md). Quick suggeste
 - Add pluggable analyzers for security/performance metrics
 - Add async retrieval and caching
 - Add Claude provider integration path in `llm_service`
-- Add unit/integration tests and evaluation suite
